@@ -34,6 +34,26 @@ const listaSpesa = [
 // -   cambio il ciclo FOR con WHILE togliendo il contatore mettendolo fuori dal ciclo (sopra) e sposto l'incremento del ciclo alla fine del ciclo ma sempre dentro al ciclo
 
 //creo variabile contatore fuori da ciclo
+// let i = 0
+// //creo ciclo while WHILE(condizione)
+// while (i < listaSpesa.length){
+//     //creo costante per salvare ogni elemento che vado a cercare
+//     const elemento = listaSpesa[i];
+//     //aggiungo contatore
+//     i++;
+//     //stampo in console ogni elemento
+//     console.log(`Elemento: ${elemento}, che ha come indice ${i} (ciclo While)`)
+// }
+
+// MILESTONE 3:
+// Invece di stampare in console, inserite ogni elemento in pagina, magari in un <li>
+
+// -   non eseguo più la stampa del ciclo con il console log ma stampo in pagina con innerHtml
+
+// creo variabile che avrà come valore la ul che ho creato in HTML
+const ul = document.querySelector(`ul`);
+
+//creo variabile contatore fuori da ciclo
 let i = 0
 //creo ciclo while WHILE(condizione)
 while (i < listaSpesa.length){
@@ -41,6 +61,8 @@ while (i < listaSpesa.length){
     const elemento = listaSpesa[i];
     //aggiungo contatore
     i++;
-    //stampo in console ogni elemento
-    console.log(`Elemento: ${elemento}, che ha come indice ${i} (ciclo While)`)
+    //stampo in pagina ogni elemento dell'array con innerhtml
+    ul.innerHTML += `<li>
+                        ${elemento}
+                    </li>`
 }
