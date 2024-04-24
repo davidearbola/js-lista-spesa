@@ -9,3 +9,67 @@ body {
 	background-color: #222;
 	color: white;
 }
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.thumb {
+	width: 150px;
+	aspect-ratio: 1;
+	display: block;
+	border-radius: 15px;
+}
+
+li {
+	list-style: none;
+}
+
+.mt {
+	margin-top: 2rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.mb-2 {
+	margin-bottom: 2rem;
+}
+
+.btn {
+	background-color: white;
+	padding: 0.5rem 1rem;
+	border: 2px solid grey;
+	border-radius: 10px;
+}
+
+.btn-cart {
+	background-color: yellow;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.d-none {
+	display: none;
+}
+
+.btn:active {
+	transform: scale(1.1);
+}

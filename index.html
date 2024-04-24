@@ -9,11 +9,43 @@
 </head>
 
 <body>
-    <h1>Lista spesa</h1>
-    <!-- creo ul da richiamare in js -->
-    <ul>
-
-    </ul>
+    <div class="container text-center relative mb-2 mt">
+        <h1 class="mb-2">Lista spesa</h1>
+        <div class="row">
+            <div>
+                <img id="thumb-0" class="thumb mb-1" src="./img/2148592154.jpg">
+                <button class="btn mb-2" type="button" id="btn-uova" value="Uova">Aggiungi al carrello</button>
+            </div>
+            <div>
+                <img id="thumb-1" class="thumb mb-1" src="./img/2148837156.jpg">
+                <button class="btn mb-2" type="button" id="btn-biscotti" value="Biscotti">Aggiungi al carrello</button>
+            </div>
+            <div>
+                <img id="thumb-2" class="thumb mb-1" src="./img/2149224288.jpg">
+                <button class="btn mb-2" type="button" id="btn-pasta" value="Pasta">Aggiungi al carrello</button>
+            </div>
+            <div>
+                <img id="thumb-3" class="thumb mb-1" src="./img/2149395316.jpg">
+                <button class="btn mb-2" type="button" id="btn-pane" value="Pane">Aggiungi al carrello</button>
+            </div>
+            <div>
+                <img id="thumb-4" class="thumb mb-1" src="./img/4686.jpg">
+                <button class="btn mb-2" type="button" id="btn-nutella" value="Nutella">Aggiungi al carrello</button>
+            </div>
+            <div>
+                <img id="thumb-5" class="thumb mb-1" src="./img/7305850_3573152.jpg">
+                <button class="btn mb-2" type="button" id="btn-latte" value="Latte">Aggiungi al carrello</button>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-cart mb-2" type="button" id="btn-carrello">Vedi il carrello</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="d-none mb-1">Ecco la tua lista della spesa:</h2>
+        <!-- creo ul da richiamare in js -->
+        <ul></ul>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 

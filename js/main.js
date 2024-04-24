@@ -8,15 +8,15 @@
 // -   creo ciclo FOR che mi seleziona ad ogni ciclo un elemento dell'array e lo eseguo con il console.log
 
 // creo array
-const listaSpesa = [
-    // inserisco elementi nell'array
-    'Pane',
-    'Latte',
-    'Uova',
-    'Biscotti',
-    'Pasta',
-    'Nutella'
-]
+// const listaSpesa = [
+//     // inserisco elementi nell'array
+//     'Pane',
+//     'Latte',
+//     'Uova',
+//     'Biscotti',
+//     'Pasta',
+//     'Nutella'
+// ]
 
 //eseguo console.log per verificare che tutta funziona
 // console.log(listaSpesa);
@@ -71,23 +71,105 @@ const listaSpesa = [
 // Se non l'avete già fatto prima, provate a scrivere in pagina sia tramite template literal (stringata su .innerHtml) che con il createElement (append).
 
 // -   invece di stampare in pagina con innerhtml usero createElement con poi la funzione append per stampare la mia lista
+//*****************************************************************************
 
-// creo variabile che avrà come valore la ul che ho creato in HTML
-const ul = document.querySelector(`ul`);
+// // creo variabile che avrà come valore la ul che ho creato in HTML
+// const ul = document.querySelector(`ul`);
 
-//creo variabile contatore fuori da ciclo
-let i = 0
-//creo ciclo while WHILE(condizione)
-while (i < listaSpesa.length){
+// //creo variabile contatore fuori da ciclo
+// let i = 0
+// //creo ciclo while WHILE(condizione)
+// while (i < listaSpesa.length){
+//     //creo costante per salvare ogni elemento che vado a cercare
+//     const elemento = listaSpesa[i];
+//     //aggiungo contatore
+//     i++;
+//     //stampo in pagina ogni elemento dell'array con create element ed append
+//     // creo elemnto li
+//     const li = document.createElement(`li`);
+//     //assegno elemento (elemento della lista) all'innehtml di li
+//     li.innerHTML = elemento;
+//     // uso appendo dentro alla lista ul
+//     ul.append(li)
+// }
+//*****************************************************************************
+
+
+// BONUS 2:
+// Sbizzarritevi e giocate con l'esercizio.
+
+// -   inserisco in pagina delle foto di alimenti con dei button ed a ogni click sul button farò il push dell'elemento nell'array per poi eseguire il codice di prima che crea la lista della spesa
+
+//creo array vuoto
+let listaSpesa = []
+
+// creo const per prendere il buttone da usare nell'event listener
+const btnUova = document.getElementById(`btn-uova`);
+// creo event listener del bottone 
+btnUova.addEventListener(`click`, function(){
+    // pusho il valore del bottone nell'array della lista spesa
+    listaSpesa.push(btnUova.value);
+    console.log(listaSpesa)
+})
+
+// creo stessa funzione per tutti i bottoni
+const btnBiscotti = document.getElementById(`btn-biscotti`);
+btnBiscotti.addEventListener(`click`, function(){
+    listaSpesa.push(btnBiscotti.value);
+    console.log(listaSpesa)
+})
+const btnPasta = document.getElementById(`btn-pasta`);
+btnPasta.addEventListener(`click`, function(){
+    listaSpesa.push(btnPasta.value);
+    console.log(listaSpesa)
+})
+const btnPane = document.getElementById(`btn-pane`);
+btnPane.addEventListener(`click`, function(){
+    listaSpesa.push(btnPane.value);
+    console.log(listaSpesa)
+})
+const btnNutella = document.getElementById(`btn-nutella`);
+btnNutella.addEventListener(`click`, function(){
+    listaSpesa.push(btnNutella.value);
+    console.log(listaSpesa)
+})
+const btnLatte = document.getElementById(`btn-latte`);
+btnLatte.addEventListener(`click`, function(){
+    listaSpesa.push(btnLatte.value);
+    console.log(listaSpesa)
+})
+
+// creo variabile per il bottone che farà mostrare il carrello
+const btnCarrello = document.getElementById(`btn-carrello`)
+//creo event per il bottone del carrello
+btnCarrello.addEventListener(`click`, function(){
+    
+    // creo variabile che avrà come valore la ul che ho creato in HTML
+    const ul = document.querySelector(`ul`);
+    //creo variabile contatore fuori da ciclo
+    let i = 0
+    //creo ciclo while WHILE(condizione)
+    
+    while (i < listaSpesa.length){
     //creo costante per salvare ogni elemento che vado a cercare
     const elemento = listaSpesa[i];
     //aggiungo contatore
     i++;
+
     //stampo in pagina ogni elemento dell'array con create element ed append
     // creo elemnto li
     const li = document.createElement(`li`);
     //assegno elemento (elemento della lista) all'innehtml di li
     li.innerHTML = elemento;
     // uso appendo dentro alla lista ul
-    ul.append(li)
+    ul.append(li);
 }
+    // creo variabile che selezione h2 con display none
+    const dNone = document.querySelector(`.d-none`);
+    // tolgo classe display none 
+    dNone.classList.remove(`d-none`);
+})
+
+
+
+
