@@ -22,8 +22,25 @@ const listaSpesa = [
 // console.log(listaSpesa);
 
 // creo ciclo FOR
-for (let i = 0; i < listaSpesa.length; i++) {
+// for (let i = 0; i < listaSpesa.length; i++) {
+//     const elemento = listaSpesa[i];
+//     //stampo con il console log ogni elemento grazie al ciclo for
+//     console.log(`Elemento: ${elemento}, che ha come indice ${i}`)
+// }
+
+// MILESTONE 2:
+// Convertite il ciclo FOR in un WHILE. Dovrete gestire il contatore manualmente.
+
+// -   cambio il ciclo FOR con WHILE togliendo il contatore mettendolo fuori dal ciclo (sopra) e sposto l'incremento del ciclo alla fine del ciclo ma sempre dentro al ciclo
+
+//creo variabile contatore fuori da ciclo
+let i = 0
+//creo ciclo while WHILE(condizione)
+while (i < listaSpesa.length){
+    //creo costante per salvare ogni elemento che vado a cercare
     const elemento = listaSpesa[i];
-    //stampo con il console log ogni elemento grazie al ciclo for
-    console.log(`Elemento: ${elemento}, che ha come indice ${i}`)
+    //aggiungo contatore
+    i++;
+    //stampo in console ogni elemento
+    console.log(`Elemento: ${elemento}, che ha come indice ${i} (ciclo While)`)
 }
