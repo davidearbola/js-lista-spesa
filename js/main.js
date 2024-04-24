@@ -50,6 +50,28 @@ const listaSpesa = [
 
 // -   non eseguo più la stampa del ciclo con il console log ma stampo in pagina con innerHtml
 
+// // creo variabile che avrà come valore la ul che ho creato in HTML
+// const ul = document.querySelector(`ul`);
+
+// //creo variabile contatore fuori da ciclo
+// let i = 0
+// //creo ciclo while WHILE(condizione)
+// while (i < listaSpesa.length){
+//     //creo costante per salvare ogni elemento che vado a cercare
+//     const elemento = listaSpesa[i];
+//     //aggiungo contatore
+//     i++;
+//     //stampo in pagina ogni elemento dell'array con innerhtml
+//     ul.innerHTML += `<li>
+//                         ${elemento}
+//                     </li>`
+// }
+
+// BONUS 1:
+// Se non l'avete già fatto prima, provate a scrivere in pagina sia tramite template literal (stringata su .innerHtml) che con il createElement (append).
+
+// -   invece di stampare in pagina con innerhtml usero createElement con poi la funzione append per stampare la mia lista
+
 // creo variabile che avrà come valore la ul che ho creato in HTML
 const ul = document.querySelector(`ul`);
 
@@ -61,8 +83,11 @@ while (i < listaSpesa.length){
     const elemento = listaSpesa[i];
     //aggiungo contatore
     i++;
-    //stampo in pagina ogni elemento dell'array con innerhtml
-    ul.innerHTML += `<li>
-                        ${elemento}
-                    </li>`
+    //stampo in pagina ogni elemento dell'array con create element ed append
+    // creo elemnto li
+    const li = document.createElement(`li`);
+    //assegno elemento (elemento della lista) all'innehtml di li
+    li.innerHTML = elemento;
+    // uso appendo dentro alla lista ul
+    ul.append(li)
 }
