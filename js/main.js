@@ -102,6 +102,7 @@
 
 //creo array vuoto
 let listaSpesa = []
+let listaCarrello = []
 
 // creo const per prendere il buttone da usare nell'event listener
 const btnUova = document.getElementById(`btn-uova`);
@@ -109,33 +110,50 @@ const btnUova = document.getElementById(`btn-uova`);
 btnUova.addEventListener(`click`, function(){
     // pusho il valore del bottone nell'array della lista spesa
     listaSpesa.push(btnUova.value);
+    listaCarrello.push(btnUova.value);
+    let carrello = document.getElementById(`num-cart`);
+    carrello.innerHTML = listaCarrello.length;
     console.log(listaSpesa)
 })
-
 // creo stessa funzione per tutti i bottoni
 const btnBiscotti = document.getElementById(`btn-biscotti`);
 btnBiscotti.addEventListener(`click`, function(){
     listaSpesa.push(btnBiscotti.value);
+    listaCarrello.push(btnBiscotti.value);
+    let carrello = document.getElementById(`num-cart`);
+    carrello.innerHTML = listaCarrello.length;
     console.log(listaSpesa)
 })
 const btnPasta = document.getElementById(`btn-pasta`);
 btnPasta.addEventListener(`click`, function(){
     listaSpesa.push(btnPasta.value);
+    listaCarrello.push(btnPasta.value);
+    let carrello = document.getElementById(`num-cart`);
+    carrello.innerHTML = listaCarrello.length;
     console.log(listaSpesa)
 })
 const btnPane = document.getElementById(`btn-pane`);
 btnPane.addEventListener(`click`, function(){
     listaSpesa.push(btnPane.value);
+    listaCarrello.push(btnPane.value);
+    let carrello = document.getElementById(`num-cart`);
+    carrello.innerHTML = listaCarrello.length;
     console.log(listaSpesa)
 })
 const btnNutella = document.getElementById(`btn-nutella`);
 btnNutella.addEventListener(`click`, function(){
     listaSpesa.push(btnNutella.value);
+    listaCarrello.push(btnNutella.value);
+    let carrello = document.getElementById(`num-cart`);
+    carrello.innerHTML = listaCarrello.length;
     console.log(listaSpesa)
 })
 const btnLatte = document.getElementById(`btn-latte`);
 btnLatte.addEventListener(`click`, function(){
     listaSpesa.push(btnLatte.value);
+    listaCarrello.push(btnLatte.value);
+    let carrello = document.getElementById(`num-cart`);
+    carrello.innerHTML = listaCarrello.length;
     console.log(listaSpesa)
 })
 
