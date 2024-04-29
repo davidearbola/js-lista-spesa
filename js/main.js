@@ -163,7 +163,10 @@ btnCarrello.addEventListener(`click`, function(){
     li.innerHTML = elemento;
     // uso appendo dentro alla lista ul
     ul.append(li);
+
 }
+    // svuoto array
+    listaSpesa = [];
     // creo variabile che selezione h2 con display none
     const dNone = document.querySelector(`.d-none`);
     // tolgo classe display none 
